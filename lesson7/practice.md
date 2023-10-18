@@ -15,26 +15,26 @@
     └── index.html
 ```
 - Файлы проекта
-  - ./package.json
+  - `package.json`
     - используется утилитой npm
     - отвечает на два вопроса:
       - какие зависимости установить
       - как собрать проект
-  - ./webpack.config.js
+  - `webpack.config.js`
     - используется утилитой webpack
     - отвечает на вопрос, как собрать проект
-  - ./tsconfig.json
+  - `tsconfig.json`
     - используется траспилятором typescript
     - отвечает на вопрос преобразования typescript в js
 - Файлы исходников
-  - ./index.html
+  - `index.html`
     - является входящий точкой сайта
     - расположен базовый блок, в котором будет жить react приложение
-  - ./src/index.tsx
+  - `src/index.tsx`
     - является входящей точкой именно react приложения 
-    - рендерится в ./index.html
+    - рендерится в `index.html`
 
-- package.json
+- `package.json`
 ```json
 {
   "name": "typescript-react-project",
@@ -86,7 +86,7 @@
   }
 }
 ```
-- webpack.config.js
+- `webpack.config.js`
 ```js
 const path = require('path');
 module.exports = {
@@ -113,7 +113,7 @@ module.exports = {
   },
 };
 ```
-- tsconfig.json
+- `tsconfig.json`
 ```json
 {
   "compilerOptions": {
@@ -151,7 +151,7 @@ module.exports = {
   </body>
 </html>
 ```
-- src/index.tsx
+- `src/index.tsx`
 ```tsx
 import * as React from "react"
 import * as ReactDOM from "react-dom"
