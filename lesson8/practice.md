@@ -147,7 +147,7 @@ module.exports = {
 </html>
 ```
 
-
+- Все сниппеты можно копировать и вставлять друг за другом в файл index.tsx
 - Указываем все импорты которые нам пригодятся
   - Работа с управлением состоянием effector и проброс состояние в react компоненты
     - `import { createEvent, createStore } from "effector"`
@@ -229,7 +229,6 @@ $playerName.on(setPlayerNameEv, (_, payload) => {
   - кнопка вправо
   - В контроле подключаем использование store $snap
   - В контроле подключаем использование store $playerName
-
 ```tsx
 function PlayerInput() {
   const setPlayerName = useEvent(setPlayerNameEv)
@@ -299,7 +298,7 @@ function PlayerInput() {
 ```
 - Создаём react компонент для рендеринга поля и игрока
   - В контроле подключаем использование store $snap
-```
+```tsx
 function Players() {
   const snap = useStore($snap)
   let players = []
@@ -312,7 +311,7 @@ function Players() {
 ```
 
 - И рендерим в итоговом рут компоненте react
-```
+```tsx
 ReactDOM.render(
   <React.StrictMode>
     <PlayerInput></PlayerInput>
